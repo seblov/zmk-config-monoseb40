@@ -1,2 +1,0 @@
-config SHIELD_MONOSEB40
-    def_bool $(shields_list_contains,monoseb40)

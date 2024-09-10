@@ -1,6 +1,0 @@
-if SHIELD_MONOSEB40
-
-config ZMK_KEYBOARD_NAME
-    default "monoseb40"
-
-endif
