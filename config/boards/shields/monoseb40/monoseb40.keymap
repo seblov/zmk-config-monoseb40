@@ -9,7 +9,7 @@
 
         default_layer {
             bindings = <
-                &kp ESC    &kp Q    &kp W   &kp E   &kp R    &kp T    &kp Y    &kp U    &kp I    &kp O    &kp P    &kp Å
+                &kp ESC    &kp Q    &kp W   &kp E   &kp R    &kp T    &kp Y    &kp U    &kp I    &kp O    &kp P    &kp NB_A_RING
             >;
         };
     };
