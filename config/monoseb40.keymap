@@ -1,18 +1,38 @@
+#include "keys_nb.h"
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/bt.h>
-#include "keys_nb.h"
 
 / {
+    behaviors {
+        Space_MO1: Space_MO1 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SPACE_MO1";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            flavor = "balanced";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-                &kp ESC    &kp Q    &kp W   &kp E   &kp R    &kp T    &kp Y    &kp U    &kp I    &kp O    &kp P    &kp NB_A_RING
-                &kp SHFT   &kp Q    &kp W   &kp E   &kp R    &kp T    &kp Y    &kp U    &kp I    &kp O    &kp P    &kp NB_A_RING
-                &kp CTRL   &kp Q    &kp W   &kp E   &kp R    &kp T    &kp Y    &kp U    &kp I    &kp O    &kp P    &kp NB_A_RING
-                                                    &kp Q    &kp Q    &kp Q    &kp Q
+&kp ESC         &kp Q  &kp W  &kp E  &kp R  &kp T               &kp Y  &kp U  &kp I  &kp O  &kp P  &kp NB_A_RING
+&kp LEFT_SHIFT  &kp A  &kp S  &kp D  &kp R  &kp T               &kp Y  &kp U  &kp I  &kp O  &kp P  &kp NB_A_RING
+&kp LCTRL       &kp Q  &kp W  &kp E  &kp R  &kp T               &kp Y  &kp U  &kp I  &kp O  &kp P  &kp NB_A_RING
+                                     &mo 1  &Space_MO1 1 SPACE  &kp Q  &kp Q
+            >;
+        };
+
+        layer_1 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                &trans  &trans  &trans  &trans
             >;
         };
     };
