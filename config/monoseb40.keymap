@@ -28,7 +28,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        Base_Layer {
             bindings = <
 &hold_tap_kp TAB ESC  &kp Q  &kp W  &kp E  &kp R                           &kp T                    &kp Y                     &kp U                        &kp I         &kp O          &kp P           &kp NB_A_RING
 &kp LEFT_SHIFT        &kp A  &kp S  &kp D  &kp F                           &kp G                    &kp H                     &kp J                        &kp K         &kp L          &kp NB_O_SLASH  &kp NB_AE
@@ -37,21 +37,21 @@
             >;
         };
 
-        layer_1 {
+        Symbols_Numpad {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                                &trans  &trans  &trans  &trans
+&kp TAB         &kp EXCL          &kp DOUBLE_QUOTES  &kp POUND          &kp DOLLAR            &kp PERCENT            &kp KP_N7  &kp KP_N8  &kp KP_N9  &trans      &kp EQUAL  &kp DEL
+&kp LEFT_SHIFT  &kp AMPERSAND     &kp SLASH          &kp AT_SIGN        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp KP_N4  &kp KP_N5  &kp KP_N6  &trans      &trans     &trans
+&kp LESS_THAN   &kp GREATER_THAN  &kp LEFT_BRACKET   &kp RIGHT_BRACKET  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp PERIOD  &trans     &trans
+                                                                        &trans                &trans                 &kp KP_N0  &trans
             >;
         };
 
-        layer_2 {
+        Functions {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                                &trans  &trans  &trans  &trans
+&kp TAB  &kp F1        &kp F2      &kp F3             &kp F4            &kp F5  &kp F6   &kp F7    &kp F8    &kp F9     &kp F10  &trans
+&trans   &trans        &kp K_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP   &trans  &kp INS  &kp HOME  &kp UP    &kp END    &trans   &trans
+&trans   &kp LEFT_ALT  &kp K_PREV  &kp K_NEXT         &kp K_PLAY_PAUSE  &trans  &trans   &kp LEFT  &kp DOWN  &kp RIGHT  &trans   &trans
+                                                      &trans            &trans  &trans   &trans
             >;
         };
     };
