@@ -66,10 +66,10 @@
 
         Functions {
             bindings = <
-&kp TAB  &kp F1        &kp F2      &kp F3             &kp F4            &kp F5  &kp F6   &kp F7    &kp F8    &kp F9     &kp F10  &trans
-&trans   &trans        &kp K_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP   &trans  &kp INS  &kp HOME  &kp UP    &kp END    &trans   &trans
-&trans   &kp LEFT_ALT  &kp K_PREV  &kp K_NEXT         &kp K_PLAY_PAUSE  &trans  &trans   &kp LEFT  &kp DOWN  &kp RIGHT  &trans   &trans
-                                                      &trans            &trans  &trans   &trans
+&kp TAB  &kp F1        &kp F2          &kp F3             &kp F4            &kp F5  &kp F6   &kp F7    &kp F8    &kp F9     &kp F10  &trans
+&trans   &trans        &kp C_MUTE      &kp C_VOLUME_DOWN  &kp C_VOLUME_UP   &trans  &kp INS  &kp HOME  &kp UP    &kp END    &trans   &trans
+&trans   &kp LEFT_ALT  &kp C_PREVIOUS  &kp C_NEXT         &kp C_PLAY_PAUSE  &trans  &trans   &kp LEFT  &kp DOWN  &kp RIGHT  &trans   &trans
+                                                          &trans            &trans  &trans   &trans
             >;
         };
     };
