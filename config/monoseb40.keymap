@@ -23,6 +23,14 @@
             tapping-term-ms = <150>;
             flavor = "balanced";
         };
+
+        a_qMark: a_qMark {
+            compatible = "zmk,behavior-tap-dance";
+            label = "A_QMARK";
+            #binding-cells = <0>;
+            tapping-term-ms = <150>;
+            bindings = <&kp NB_A_RING>, <&kp NB_QMARK>;
+        };
     };
 
     keymap {
@@ -30,19 +38,19 @@
 
         Base_Layer {
             bindings = <
-&hold_tap_kp TAB ESC  &kp Q  &kp W  &kp E  &kp R                           &kp T                    &kp Y                     &kp U                        &kp I         &kp O          &kp P           &kp NB_A_RING
+&hold_tap_kp TAB ESC  &kp Q  &kp W  &kp E  &kp R                           &kp T                    &kp Y                     &kp U                        &kp I         &kp O          &kp P           &a_qMark
 &kp LEFT_SHIFT        &kp A  &kp S  &kp D  &kp F                           &kp G                    &kp H                     &kp J                        &kp K         &kp L          &kp NB_O_SLASH  &kp NB_AE
-&kp LCTRL             &kp Z  &kp X  &kp C  &kp V                           &kp B                    &kp N                     &kp M                        &kp NB_COMMA  &kp NB_PERIOD  &kp MINUS       &hold_tap_kp ASTERISK SINGLE_QUOTE
+&kp LCTRL             &kp Z  &kp X  &kp C  &kp V                           &kp B                    &kp N                     &kp M                        &kp NB_COMMA  &kp NB_PERIOD  &kp MINUS       &hold_tap_kp LS(NON_US_HASH) NON_US_HASH
                                            &hold_tap_kp LEFT_ALT LEFT_WIN  &hold_tap_layer 1 SPACE  &hold_tap_kp LSHFT ENTER  &hold_tap_layer 2 BACKSPACE
             >;
         };
 
         Symbols_Numpad {
             bindings = <
-&kp TAB         &kp EXCL          &kp DOUBLE_QUOTES  &kp POUND          &kp DOLLAR            &kp PERCENT            &kp KP_N7  &kp KP_N8  &kp KP_N9  &trans      &kp EQUAL  &kp DEL
-&kp LEFT_SHIFT  &kp AMPERSAND     &kp SLASH          &kp AT_SIGN        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp KP_N4  &kp KP_N5  &kp KP_N6  &trans      &trans     &trans
-&kp LESS_THAN   &kp GREATER_THAN  &kp LEFT_BRACKET   &kp RIGHT_BRACKET  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp PERIOD  &trans     &trans
-                                                                        &trans                &trans                 &kp KP_N0  &trans
+&kp GRAVE       &kp LS(N1)         &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(NUMBER_5)  &kp KP_N7  &kp KP_N8  &kp KP_N9  &trans      &kp LS(N0)  &kp DEL
+&kp LEFT_SHIFT  &kp LS(N6)         &kp LS(NUMBER_7)  &kp RA(NUMBER_2)  &kp LS(N8)        &kp LS(N9)        &kp KP_N4  &kp KP_N5  &kp KP_N6  &trans      &trans      &trans
+&kp BACKSLASH   &kp LS(BACKSLASH)  &kp RA(N8)        &kp RA(N9)        &kp RA(N7)        &kp RA(N0)        &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp PERIOD  &trans      &kp EQUAL
+                                                                       &trans            &trans            &kp KP_N0  &trans
             >;
         };
 
